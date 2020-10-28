@@ -2,7 +2,6 @@ ansible-elk
 ===========
 Ansible Playbook for setting up the ELK/EFK Stack and Filebeat client on remote hosts
 
-![ELK](/image/ansible-elk.png?raw=true)
 
 [![CI](https://travis-ci.org/sadsfae/ansible-elk.svg?branch=master)](https://travis-ci.org/sadsfae/ansible-elk)
 
