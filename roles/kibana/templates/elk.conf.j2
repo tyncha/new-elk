@@ -5,9 +5,9 @@ server {
     server_name {{ dns_or_IP }};
 
 
-    ssl_certificate    /etc/ssl/{{ dns_or_IP }}/{{ dns_or_IP }}-cert.pem;
-    ssl_certificate_key  /etc/ssl/{{ dns_or_IP }}/{{ dns_or_IP }}-key.pem;
-    ssl_dhparam    /etc/ssl/{{ dns_or_IP }}/dhparam.pem;
+    ssl_certificate      /etc/letsencrypt/archive/{{ dns_or_IP }}/cert1.pem;
+    ssl_certificate_key  /etc/letsencrypt/archive/{{ dns_or_IP }}/privkey1.pem;
+    
 
 
     

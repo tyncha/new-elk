@@ -1,6 +1,19 @@
 - hosts: localhost
   tasks:
 
+  - name: Install cert
+    import_role:
+      name: geerlingguy.certbot
+
+
+  # vars:
+  #   certbot_auto_renew_user: vrodi18
+  #   certbot_auto_renew_minute: "20"
+  #   certbot_auto_renew_hour: "5"
+
+  # roles:
+  #   - geerlingguy.certbot
+
   - name: Disable SELinux
     selinux:
       state: disabled
@@ -29,16 +42,9 @@
   #   import_role:
   #     name: filebeat
 
-  roles:
-  - role: lip-computing.ssl-certs
-    ssl_certs_common_name: "3.238.131.19"
-    ssl_certs_country: "PT"
-    ssl_certs_locality: "Lisbon"
-    ssl_certs_organization: "LIP"
-    ssl_certs_state: "Lisbon"
-    ssl_certs_path_owner: "root"
-    ssl_certs_path_group: "root"
-    ssl_certs_generate_dh_param: true
+  # roles:
+  # - role: lip-computing.ssl-certs
+    
 
 - hosts: remote
   tasks:
